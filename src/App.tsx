@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import { Container, Row, Col } from 'react-bootstrap'
 import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
 
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
+      <Header/>
       <Container fluid>
         <Row>
           <Col sm="12">
@@ -15,8 +16,7 @@ function App() {
         </Row>
       </Container>
       <footer className="footer fixed-bottom">
-
-            <Footer />
+        <Footer />
       </footer>
     </div>
   );
