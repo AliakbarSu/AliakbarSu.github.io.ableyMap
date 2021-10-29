@@ -1,23 +1,19 @@
-# Getting Started with Create React App
+# Abley Map Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Demo](https://aliakbarsu.github.io/AliakbarSu.github.io.ableyMap/)
 
-## Available Scripts
+## How to run this project
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Head over to [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode
 
 ### `npm run build`
 
@@ -29,18 +25,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Achievments
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The web page has a header component to navigate between different pages
+- Footer section displays the copyright details
+- The Map view has different layers that you can switch between
+- You can toggle on and off the feature layer on the map
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenges
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Lack of good documentation for using the arcgis library
+- Wasn't able to find the basemap specific name for different basemaps
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Improvements for production version
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The current map view is not responsive enough so for the production version I would probabbly make it more responsive using mobile first approach.
