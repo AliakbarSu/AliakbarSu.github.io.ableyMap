@@ -7,4 +7,5 @@ export default class MapView {
   }
 
   on() {}
+  when() {}
 }
