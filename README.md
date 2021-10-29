@@ -31,6 +31,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - Footer section displays the copyright details
 - The Map view has different layers that you can switch between
 - You can toggle on and off the feature layer on the map
+- The user sees a loading message when the map is still loading
 
 ## Challenges
 
@@ -39,4 +40,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Improvements for production version
 
-The current map view is not responsive enough so for the production version I would probabbly make it more responsive using mobile first approach.
+- The current map view is not responsive enough so for the production version I would probabbly make it more responsive using mobile first approach.
+- Use react router to connect the navigation links in the header of the page
+- Switch the plain text with css animation for the loading message
