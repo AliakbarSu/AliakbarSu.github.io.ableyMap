@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.scss';
 import { Container, Row, Col } from 'react-bootstrap'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
+import Map from './components/Map/Map';
+import './App.scss';
 
 
 const App: React.FC = () => {
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Container fluid>
         <Row>
           <Col sm="12">
+            <Map/>
           </Col>
         </Row>
       </Container>
