@@ -4,11 +4,15 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Map from './components/Map/Map';
 import './App.scss';
+import { useAppSelector } from './store/hooks'
+import Loader from './components/Loader/Loader'
 
 
 const App: React.FC = () => {
+  const loading = useAppSelector((state) => state.UI.loading)
   return (
     <div className="App">
+      {loading && <Loader/>}
       <Header/>
       <Container fluid>
         <Row>

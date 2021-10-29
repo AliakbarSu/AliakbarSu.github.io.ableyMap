@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import './map.scss';
 import MapView from "@arcgis/core/views/MapView";
 import WebMap from "@arcgis/core/WebMap";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
@@ -9,14 +10,18 @@ import Home from '@arcgis/core/widgets/Home';
 import ScaleBar from '@arcgis/core/widgets/ScaleBar';
 import BasemapToggle from '@arcgis/core/widgets/BasemapToggle';
 import Basemap from '@arcgis/core/Basemap';
-import './map.scss';
+import { useAppDispatch } from '../../store/hooks'
+import { startLoading, stopLoading } from '../../store/UI/UI.reducer'
 
 
 
 const Map: React.FC = () => {
     const mapDiv = useRef<HTMLDivElement>(null)
 
+    const dispatch = useAppDispatch()
+
     useEffect(() => {
+        dispatch(startLoading())
         if (mapDiv.current) {
             const locatorTask = new Locator({
                 url: "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
@@ -34,6 +39,13 @@ const Map: React.FC = () => {
                 map: webmap,
                 center: [-118.805, 34.027], // Longitude, latitude
                 zoom: 8,
+            })
+
+            view.when(() => {
+                dispatch(stopLoading())
+              }, (error: any) => {
+                dispatch(stopLoading())
+                console.log("Loading map failed", error)
             })
 
             // Add Widgets
@@ -64,7 +76,7 @@ const Map: React.FC = () => {
                 portalItem: {
                   id: "5fcae3bfae5241b6abc3fa3ea93bdf3a" 
                 }
-              });
+            })
         
             let basemapToggle = new BasemapToggle({
                 view: view,
